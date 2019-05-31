@@ -23,7 +23,7 @@ public class HelloResource {
     @GetMapping("/hello")
     public String hello(@RequestParam("name") String aux){
         log.info("Appel de Hello");
-        return "Hello, "+aux;
+        return "Hello, "+aux.toUpperCase();
     }
     
 }
