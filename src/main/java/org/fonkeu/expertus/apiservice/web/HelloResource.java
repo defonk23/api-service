@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class HelloResource {
     private final Logger log= LoggerFactory.getLogger(getClass());
+    
+    
     @GetMapping("/hello")
     public String hello(@RequestParam("name") String aux){
         log.info("Appel de Hello");
