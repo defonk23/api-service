@@ -12,3 +12,9 @@ cache:
     - '$HOME/.m2'  
 script:
   - ./mvnw clean package
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API
+  app: expertus-api
+  on:
+    branch: master
