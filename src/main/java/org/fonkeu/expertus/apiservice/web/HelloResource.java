@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author TN
+ * @author FONKEU
  */
 @RestController
 @RequestMapping("/api")
@@ -24,7 +24,7 @@ public class HelloResource {
     
     @GetMapping("/hello")
     public String hello(@RequestParam("name") String aux){
-        log.info("Appel de Hello");
+        log.info("Appel de Hello par : "+aux);
         return "Hello, "+aux.toUpperCase();
     }
     
